@@ -1,5 +1,8 @@
 # 📌 2026년 8월 기준 카테고리별 GitHub 추천 저장소 & 원본 글 정리 문서
 
+> 📰 **[최신 기술 블로그 칼럼]**  
+> 🚀 **[AI 에이전트 시대의 개발 생산성: Rust 툴체인(uv·Ruff·Ghostty)과 MCP 보안 심층 분석](posts/2026-08-03-ai-agent-rust-toolchain-trends.md)** (2026.08.03 작성)
+
 ---
 
 ## 📖 목차
