@@ -7,15 +7,15 @@
 ---
 
 ## 📌 목차
-1. [💡 서론: Node.js 중심 생태계에서 Bun & Edge 런타임으로의 전환](#1-서론-nodejs-중심-생태계에서-bun--edge-런타임으로의-전환)
-2. [🚀 1. 왜 Hono인가? (Express vs Hono 속도 & 용량 비교)](#2-1-왜-hono인가-express-vs-hono-속도--용량-비교)
-3. [🗄️ 2. Prisma의 대안, Drizzle ORM이 주목받는 이유](#3-2-prisma의-대안-drizzle-orm이-주목받는-이유)
-4. [🛠️ 3. 10분 만에 끝내는 Bun + Hono + Drizzle 실전 API 서버 구축](#4-3-10분-만에-끝내는-bun--hono--drizzle-실전-api-서버-구축)
-   - 3.1 프로젝트 세팅 및 패키지 설치
-   - 3.2 스키마 정의 및 DB 마이그레이션
-   - 3.3 Hono 라우터 작성 및 타입 안전한 CRUD 구현
-5. [📊 4. 벤치마크 및 메모리 오버헤드 분석](#5-4-벤치마크-및-메모리-오버헤드-분석)
-6. [🎯 5. 마무리: 어떤 프로젝트에 도입해야 할까?](#6-5-마무리-어떤-프로젝트에-도입해야-할까)
+1. [💡 서론: Node.js 중심 생태계에서 Bun & Edge 런타임으로의 전환](#1-💡-서론-nodejs-중심-생태계에서-bun--edge-런타임으로의-전환)
+2. [🚀 왜 Hono인가? (Express vs Hono 속도 & 용량 비교)](#2-🚀-왜-hono인가-express-vs-hono-속도--용량-비교)
+3. [🗄️ Prisma의 대안, Drizzle ORM이 주목받는 이유](#3-🗄️-prisma의-대안-drizzle-orm이-주목받는-이유)
+4. [🛠️ 10분 만에 끝내는 Bun + Hono + Drizzle 실전 API 서버 구축](#4-🛠️-10분-만에-끝내는-bun--hono--drizzle-실전-api-서버-구축)
+   - 4.1 프로젝트 세팅 및 패키지 설치
+   - 4.2 스키마 정의 (`src/db/schema.ts`)
+   - 4.3 Hono 라우터 작성 및 CRUD 구현 (`src/index.ts`)
+5. [📊 벤치마크 및 메모리 오버헤드 분석](#5-📊-벤치마크-및-메모리-오버헤드-분석)
+6. [🎯 마무리: 어떤 프로젝트에 도입해야 할까?](#6-🎯-마무리-어떤-프로젝트에-도입해야-할까)
 
 ---
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 2. 🚀 1. 왜 Hono인가? (Express vs Hono 속도 & 용량 비교)
+## 2. 🚀 왜 Hono인가? (Express vs Hono 속도 & 용량 비교)
 
 [Hono](https://hono.dev/)는 일본의 개발자 Yusuke Wada가 만든 **초경량 멀티 런타임 웹 프레임워크**입니다.
 
@@ -56,7 +56,7 @@
 
 ---
 
-## 3. 🗄️ 2. Prisma의 대안, Drizzle ORM이 주목받는 이유
+## 3. 🗄️ Prisma의 대안, Drizzle ORM이 주목받는 이유
 
 TypeScript ORM 생태계에서 Prisma가 독점적이었지만, Prisma는 자체 Rust 엔진 바이너리를 포함하고 있어 **파일 용량이 무겁고, 복잡한 쿼리 생성 시 오버헤드**가 발생하는 단점이 있었습니다.
 
@@ -68,9 +68,9 @@ TypeScript ORM 생태계에서 Prisma가 독점적이었지만, Prisma는 자체
 
 ---
 
-## 4. 🛠️ 3. 10분 만에 끝내는 Bun + Hono + Drizzle 실전 API 서버 구축
+## 4. 🛠️ 10분 만에 끝내는 Bun + Hono + Drizzle 실전 API 서버 구축
 
-### 3.1 프로젝트 세팅 및 패키지 설치
+### 4.1 프로젝트 세팅 및 패키지 설치
 `Bun`이 설치된 상태에서 프로젝트를 생성합니다.
 
 ```bash
@@ -83,7 +83,7 @@ bun add drizzle-orm
 bun add -D drizzle-kit
 ```
 
-### 3.2 스키마 정의 (`src/db/schema.ts`)
+### 4.2 스키마 정의 (`src/db/schema.ts`)
 Drizzle에서는 TypeScript 코드만으로 테이블 스키마를 정의합니다.
 
 ```typescript
@@ -97,7 +97,7 @@ export const users = sqliteTable('users', {
 });
 ```
 
-### 3.3 Hono 라우터 작성 및 CRUD 구현 (`src/index.ts`)
+### 4.3 Hono 라우터 작성 및 CRUD 구현 (`src/index.ts`)
 
 ```typescript
 import { Hono } from 'hono';
@@ -139,7 +139,7 @@ export default app;
 
 ---
 
-## 5. 📊 4. 벤치마크 및 메모리 오버헤드 분석
+## 5. 📊 벤치마크 및 메모리 오버헤드 분석
 
 초당 요청 처리 수(RPS) 및 무부하 시 메모리 점유율 비교 (HTTP Benchmark 기준):
 
@@ -156,7 +156,7 @@ Hono + Drizzle (Bun)      : ███ 28 MB ⚡
 
 ---
 
-## 6. 🎯 5. 마무리: 어떤 프로젝트에 도입해야 할까?
+## 6. 🎯 마무리: 어떤 프로젝트에 도입해야 할까?
 
 ### ✅ 적극 추천하는 경우
 * **Cloudflare Workers, Vercel Edge**에 서버를 배포할 때

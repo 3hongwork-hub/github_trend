@@ -7,15 +7,15 @@
 ---
 
 ## 📌 목차
-1. [💡 서론: 단순 단답형 Chatbot에서 자율형 Multi-Agent 웹 서비스로](#1-서론-단순-단답형-chatbot에서-자율형-multi-agent-웹-서비스로)
-2. [🔌 1. MCP(Model Context Protocol)가 웹 서비스 아키텍처에 가져온 혁신](#2-1-mcpmodel-context-protocol가-웹-서비스-아키텍처에-가져온-혁신)
-3. [⚡ 2. Vercel AI SDK 4.0의 핵심 신기능 (Tool Calling & Agentic Loops)](#3-2-vercel-ai-sdk-40의-핵심-신기능-tool-calling--agentic-loops)
-4. [🛠️ 3. 실전: Next.js App Router 기반 멀티 에이전트 서비스 구축 가이드](#4-3-실전-nextjs-app-router-기반-멀티-에이전트-서비스-구축-가이드)
-   - 3.1 프로젝트 세팅 및 MCP 서버 연결
-   - 3.2 에이전트 도구(Tools) 및 워크플로우 정의
-   - 3.3 React Server Components & UI 스트리밍 구현
-5. [🛡️ 4. AI 에이전트 프로덕션 배포 시 필수 보안 체크리스트](#5-4-ai-에이전트-프로덕션-배포-시-필수-보안-체크리스트)
-6. [🎯 5. 마무리: AI-Native 웹 애플리케이션의 미래](#6-5-마무리-ai-native-웹-애플리케이션의-미래)
+1. [💡 서론: 단순 단답형 Chatbot에서 자율형 Multi-Agent 웹 서비스로](#1-💡-서론-단순-단답형-chatbot에서-자율형-multi-agent-웹-서비스로)
+2. [🔌 MCP(Model Context Protocol)가 웹 서비스 아키텍처에 가져온 혁신](#2-🔌-mcpmodel-context-protocol가-웹-서비스-아키텍처에-가져온-혁신)
+3. [⚡ Vercel AI SDK 4.0의 핵심 신기능 (Tool Calling & Agentic Loops)](#3-⚡-vercel-ai-sdk-40의-핵심-신기능-tool-calling--agentic-loops)
+4. [🛠️ 실전: Next.js App Router 기반 멀티 에이전트 서비스 구축 가이드](#4-🛠️-실전-nextjs-app-router-기반-멀티-에이전트-서비스-구축-가이드)
+   - 4.1 패키지 설치
+   - 4.2 에이전트 라우트 작성 (`app/api/chat/route.ts`)
+   - 4.3 React 클라이언트 UI 스트리밍 (`app/page.tsx`)
+5. [🛡️ AI 에이전트 프로덕션 배포 시 필수 보안 체크리스트](#5-🛡️-ai-에이전트-프로덕션-배포-시-필수-보안-체크리스트)
+6. [🎯 마무리: AI-Native 웹 애플리케이션의 미래](#6-🎯-마무리-ai-native-웹-애플리케이션의-미래)
 
 ---
 
@@ -29,7 +29,7 @@
 
 ---
 
-## 2. 🔌 1. MCP(Model Context Protocol)가 웹 서비스 아키텍처에 가져온 혁신
+## 2. 🔌 MCP(Model Context Protocol)가 웹 서비스 아키텍처에 가져온 혁신
 
 이전에는 LLM에 외부 데이터(PostgreSQL, GitHub, Slack 등)를 연동하려면 각 API마다 custom tool-calling 코드를 일일이 작성해야 했습니다.
 
@@ -48,7 +48,7 @@ Anthropic이 제안하고 글로벌 표준이 된 **MCP(Model Context Protocol)*
 
 ---
 
-## 3. ⚡ 2. Vercel AI SDK 4.0의 핵심 신기능 (Tool Calling & Agentic Loops)
+## 3. ⚡ Vercel AI SDK 4.0의 핵심 신기능 (Tool Calling & Agentic Loops)
 
 Next.js 및 React 풀스택 생태계에서 AI 표준으로 자리 잡은 **Vercel AI SDK 4.0**은 에이전트 구축을 위해 다음과 같은 핵심 기능을 제공합니다.
 
@@ -58,16 +58,16 @@ Next.js 및 React 풀스택 생태계에서 AI 표준으로 자리 잡은 **Verc
 
 ---
 
-## 4. 🛠️ 3. 실전: Next.js App Router 기반 멀티 에이전트 서비스 구축 가이드
+## 4. 🛠️ 실전: Next.js App Router 기반 멀티 에이전트 서비스 구축 가이드
 
-### 3.1 패키지 설치
+### 4.1 패키지 설치
 Next.js 프로젝트에서 Vercel AI SDK 및 MCP 관련 패키지를 설치합니다.
 
 ```bash
 bun add ai @ai-sdk/openai @ai-sdk/anthropic @modelcontextprotocol/sdk z
 ```
 
-### 3.2 에이전트 라우트 작성 (`app/api/chat/route.ts`)
+### 4.2 에이전트 라우트 작성 (`app/api/chat/route.ts`)
 
 `maxSteps` 옵션을 활성화하여 AI가 사용자의 요청을 해결할 때까지 여러 도구를 순차적으로 호출하도록 설정합니다.
 
@@ -116,7 +116,7 @@ export async function POST(req: Request) {
 }
 ```
 
-### 3.3 React 클라이언트 UI 스트리밍 (`app/page.tsx`)
+### 4.3 React 클라이언트 UI 스트리밍 (`app/page.tsx`)
 
 `useChat` 훅을 사용하면 AI의 생각 과정, 호출된 툴의 진행 상태, 최종 답변이 UI에 매끄럽게 스트리밍됩니다.
 
@@ -167,7 +167,7 @@ export default function AgentDashboard() {
 
 ---
 
-## 5. 🛡️ 4. AI 에이전트 프로덕션 배포 시 필수 보안 체크리스트
+## 5. 🛡️ AI 에이전트 프로덕션 배포 시 필수 보안 체크리스트
 
 자율 에이전트가 데이터베이스 조작이나 외부 커맨드를 실행할 수 있으므로 프로덕션 배포 시 다음 보안 장치가 필수적입니다.
 
@@ -177,7 +177,7 @@ export default function AgentDashboard() {
 
 ---
 
-## 6. 🎯 5. 마무리: AI-Native 웹 애플리케이션의 미래
+## 6. 🎯 마무리: AI-Native 웹 애플리케이션의 미래
 
 Vercel AI SDK 4.0과 MCP의 조합은 웹 개발자가 단 몇 시간 만에 엔터프라이즈급 AI 에이전트 서비스를 구축할 수 있도록 만들어 주었습니다.
 
