@@ -8,49 +8,134 @@ layout: default
     <p class="hero-subtitle">분야별 추천 저장소, 초고속 툴체인 및 핵심 기술 칼럼 모음</p>
   </div>
 
-  <!-- 1. 최신 포스팅 (Featured Posts) -->
-  <section class="section-container">
-    <h2 class="post-list-heading">🚀 최신 포스팅</h2>
-    <div class="clean-post-list">
-      {% for post in site.posts limit:3 %}
-        <article class="clean-post-item featured-item">
-          <div class="post-meta-row">
-            <span class="post-date-badge">📅 {{ post.date | date: "%Y년 %m월 %d일" }}</span>
-            {% if post.categories %}
-              <span class="post-cat-badge">{{ post.categories | join: " / " }}</span>
-            {% endif %}
-          </div>
-          <h3 class="post-item-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-          <p class="post-item-description">
-            {{ post.description }}
-          </p>
-        </article>
-      {% endfor %}
+  <!-- Real-time Instant Search Bar -->
+  <div class="search-section">
+    <div class="search-input-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="포스팅 제목, 태그(AI, Backend, Git), 키워드로 실시간 검색..." autocomplete="off">
     </div>
+    <div id="search-status" class="search-status-badge" style="display: none;"></div>
+  </div>
+
+  <!-- Search Results Container (Hidden when input is empty) -->
+  <section id="search-results-section" class="section-container" style="display: none;">
+    <h2 class="post-list-heading">🔍 검색 결과</h2>
+    <div id="search-results-list" class="clean-post-list"></div>
   </section>
 
-  <!-- 2. 전체 아티클 목록 (All Articles) -->
-  <section class="section-container">
-    <h2 class="post-list-heading">📝 전체 아티클 목록 ({{ site.posts.size }})</h2>
-    <div class="clean-post-list">
-      {% for post in site.posts %}
-        <article class="clean-post-item">
-          <div class="post-meta-row">
-            <span class="post-date-badge">📅 {{ post.date | date: "%Y년 %m월 %d일" }}</span>
-            {% if post.categories %}
-              <span class="post-cat-badge">{{ post.categories | join: " / " }}</span>
-            {% endif %}
-          </div>
-          <h3 class="post-item-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-          <p class="post-item-description">
-            {{ post.description }}
-          </p>
-        </article>
-      {% endfor %}
-    </div>
-  </section>
+  <!-- Default Sections (Hidden when searching) -->
+  <div id="default-blog-sections">
+    <!-- 1. 최신 포스팅 (Featured Posts) -->
+    <section class="section-container">
+      <h2 class="post-list-heading">🚀 최신 포스팅</h2>
+      <div class="clean-post-list">
+        {% for post in site.posts limit:3 %}
+          <article class="clean-post-item featured-item">
+            <div class="post-meta-row">
+              <span class="post-date-badge">📅 {{ post.date | date: "%Y년 %m월 %d일" }}</span>
+              {% if post.categories %}
+                <span class="post-cat-badge">{{ post.categories | join: " / " }}</span>
+              {% endif %}
+            </div>
+            <h3 class="post-item-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+            <p class="post-item-description">
+              {{ post.description }}
+            </p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- 2. 전체 아티클 목록 (All Articles) -->
+    <section class="section-container">
+      <h2 class="post-list-heading">📝 전체 아티클 목록 ({{ site.posts.size }})</h2>
+      <div class="clean-post-list">
+        {% for post in site.posts %}
+          <article class="clean-post-item">
+            <div class="post-meta-row">
+              <span class="post-date-badge">📅 {{ post.date | date: "%Y년 %m월 %d일" }}</span>
+              {% if post.categories %}
+                <span class="post-cat-badge">{{ post.categories | join: " / " }}</span>
+              {% endif %}
+            </div>
+            <h3 class="post-item-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+            <p class="post-item-description">
+              {{ post.description }}
+            </p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('search-input');
+    const searchResultsSection = document.getElementById('search-results-section');
+    const searchResultsList = document.getElementById('search-results-list');
+    const defaultSections = document.getElementById('default-blog-sections');
+    const searchStatus = document.getElementById('search-status');
+
+    let postsData = [];
+
+    // Fetch search index JSON
+    fetch('{{ "/search.json" | relative_url }}')
+      .then(response => response.json())
+      .then(data => {
+        postsData = data;
+      })
+      .catch(err => console.error('Error loading search index:', err));
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.trim().toLowerCase();
+
+      if (!query) {
+        searchResultsSection.style.display = 'none';
+        searchStatus.style.display = 'none';
+        defaultSections.style.display = 'block';
+        return;
+      }
+
+      defaultSections.style.display = 'none';
+      searchResultsSection.style.display = 'block';
+
+      const filteredPosts = postsData.filter(post => {
+        const titleMatch = post.title && post.title.toLowerCase().includes(query);
+        const descMatch = post.description && post.description.toLowerCase().includes(query);
+        const catMatch = post.categories && post.categories.toLowerCase().includes(query);
+        return titleMatch || descMatch || catMatch;
+      });
+
+      searchStatus.style.display = 'inline-block';
+      searchStatus.textContent = `검색 결과: ${filteredPosts.length}개`;
+
+      if (filteredPosts.length === 0) {
+        searchResultsList.innerHTML = `
+          <div class="no-search-results">
+            <p>🔍 "${query}"에 해당하는 포스팅을 찾지 못했습니다.</p>
+          </div>
+        `;
+      } else {
+        searchResultsList.innerHTML = filteredPosts.map(post => `
+          <article class="clean-post-item">
+            <div class="post-meta-row">
+              <span class="post-date-badge">📅 ${post.date}</span>
+              ${post.categories ? `<span class="post-cat-badge">${post.categories}</span>` : ''}
+            </div>
+            <h3 class="post-item-title">
+              <a href="${post.url}">${post.title}</a>
+            </h3>
+            <p class="post-item-description">
+              ${post.description || ''}
+            </p>
+          </article>
+        `).join('');
+      }
+    });
+  });
+</script>
