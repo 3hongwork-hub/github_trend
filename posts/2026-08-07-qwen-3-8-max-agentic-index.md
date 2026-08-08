@@ -1,3 +1,10 @@
+---
+layout: post
+title: "🧠 [2026 AI 트렌드] Qwen 3.8 Max, Agentic Index 종합 1위 달성: 오픈 웨이트와 자율 에이전트의 새로운 지평"
+date: 2026-08-07
+categories: [AI, Model]
+---
+
 # 🧠 [2026 AI 트렌드] Qwen 3.8 Max, Agentic Index 종합 1위 달성: 오픈 웨이트와 자율 에이전트의 새로운 지평
 
 > **작성일**: 2026년 8월 7일  

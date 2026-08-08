@@ -1,0 +1,21 @@
+title: "📈 GitHub Trend & Tech Insights"
+description: "개발 트렌드, 분야별 추천 GitHub 저장소, 생산성 툴체인 및 최신 기술 아티클"
+baseurl: "/github_trend"
+url: "https://3hongwork-hub.github.io"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+include:
+  - posts
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:name/
+
+markdown: kramdown
+highlighter: rouge
