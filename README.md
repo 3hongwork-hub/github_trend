@@ -1,5 +1,8 @@
 # 📈 GitHub Trend & Tech Insights (2026)
 
+> 🌐 **[공식 깃블로그 바로가기]**  
+> 👉 **[https://3hongwork-hub.github.io/github_trend/](https://3hongwork-hub.github.io/github_trend/)**
+
 개발 트렌드, 분야별 추천 GitHub 저장소, 생산성 툴체인 및 최신 기술 아티클을 정리하고 공유하는 저장소입니다.
 
 ---
@@ -32,6 +35,7 @@
 ## 📁 저장소 구조
 ```
 .
+├── _config.yml
 ├── README.md
 └── posts/
     ├── 2026-08-08-weekly-github-trends-august-w1.md
