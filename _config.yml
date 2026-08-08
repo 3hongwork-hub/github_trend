@@ -9,6 +9,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+header_pages:
+  - index.html
+
 permalink: /posts/:year-:month-:day-:title/
 
 markdown: kramdown

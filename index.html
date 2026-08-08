@@ -8,31 +8,28 @@ layout: default
     <p class="hero-subtitle">개발 트렌드, 분야별 추천 저장소, 초고속 툴체인 및 최신 기술 칼럼 모음</p>
   </div>
 
-  <h2 class="post-list-heading">📝 전체 아티클 ({{ site.posts.size }})</h2>
+  <h2 class="post-list-heading">📝 전체 아티클 목록 ({{ site.posts.size }})</h2>
 
-  <div class="post-cards-grid">
+  <ul class="clean-post-list">
     {% for post in site.posts %}
-      <article class="post-card">
-        <div class="post-card-header">
-          <span class="post-date">📅 {{ post.date | date: "%Y년 %m월 %d일" }}</span>
+      <li class="clean-post-item">
+        <div class="post-meta-row">
+          <span class="post-date-badge">📅 {{ post.date | date: "%Y년 %m월 %d일" }}</span>
           {% if post.categories %}
-            <span class="post-category-badge">{{ post.categories | join: " / " }}</span>
+            <span class="post-cat-badge">{{ post.categories | join: " / " }}</span>
           {% endif %}
         </div>
-        <h3 class="post-card-title">
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <h3 class="post-item-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h3>
-        <div class="post-card-excerpt">
+        <p class="post-item-excerpt">
           {% if post.description %}
             {{ post.description }}
           {% else %}
-            {{ post.excerpt | strip_html | truncatewords: 25 }}
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
           {% endif %}
-        </div>
-        <div class="post-card-footer">
-          <a href="{{ post.url | relative_url }}" class="read-more-btn">아티클 읽기 →</a>
-        </div>
-      </article>
+        </p>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </div>
