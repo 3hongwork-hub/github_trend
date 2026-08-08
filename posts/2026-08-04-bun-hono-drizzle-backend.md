@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "⚡ [2026 백엔드 혁신] Bun + Hono + Drizzle ORM으로 구축하는 차세대 초고속 API"
+description: "Node.js/Express를 대체하는 Bun, Hono, Drizzle ORM 조합의 메모리 절감 및 Edge API 구축 실전 가이드."
 date: 2026-08-04
 categories: [Backend, TypeScript]
 ---

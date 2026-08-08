@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "🤖 [2026 AI 풀스택] Vercel AI SDK 4.0 & MCP로 구축하는 차세대 멀티 에이전트 웹 서비스"
+description: "Vercel AI SDK 4.0의 Tool Calling 루프와 Anthropic MCP 규격을 연동하여 자율형 멀티 에이전트 웹 앱을 구축하는 실전 10분 가이드."
 date: 2026-08-06
 categories: [AI, Fullstack]
 ---

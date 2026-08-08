@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "📌 2026년 8월 기준 카테고리별 GitHub 추천 저장소 & 원본 글 정리 문서"
+description: "현업 개발자 관점의 분야별 필수 GitHub Repo 25선과 2026년 하반기 개발 툴체인 최신 트렌드를 정리한 베이스캠프 가이드."
 date: 2026-08-03
 categories: [GitHub, Recommendations]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "🚀 [2026 기술 트렌드] AI 에이전트 시대의 개발 생산성: Rust 툴체인(uv·Ruff·Ghostty)과 MCP 보안 심층 분석"
+description: "자율형 AI 에이전트, Rust 기반 초고속 툴체인(uv, Ruff, Ghostty), 그리고 MCP 샌드박스 보안의 급부상 원인과 실무 적용 가이드."
 date: 2026-08-03
 categories: [Trends, Rust]
 ---

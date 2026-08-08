@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "📊 [주간 GitHub 트렌드] 2026년 8월 1주차: OpenClaw 바이럴, Qwen 3.8 Max 오픈 웨이트, 그리고 AI 공급망 보안 경보"
+description: "로컬 AI 비서 OpenClaw의 21만 별 달성, Qwen 3.8 Max 오픈 가중치 공개, MCP 공급망 보안 스캐너 Bumblebee 및 8월 악성 저장소 경고 요약."
 date: 2026-08-08
 categories: [Weekly, Trends]
 ---

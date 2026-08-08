@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "🌱 [초보 개발자 가이드] 막막한 터미널과 Git, AI 코딩 도구 한 번에 이해하기 (2026 입문편)"
+description: "개발 입문자와 비전공자를 위한 필수 터미널 명령어, Git 3단계 흐름, 그리고 AI 코딩 도구 스마트 활용법 총정리."
 date: 2026-08-03
 categories: [Beginner, Git]
 ---
