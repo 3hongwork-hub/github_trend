@@ -6,8 +6,6 @@ date: 2026-08-08
 categories: [Weekly, Trends]
 ---
 
-# 📊 [주간 GitHub 트렌드] 2026년 8월 1주차: OpenClaw 바이럴, Qwen 3.8 Max 오픈 웨이트, 그리고 AI 공급망 보안 경보
-
 > **작성일**: 2026년 8월 8일  
 > **구분**: 주간 깃허브 트렌드 보고서 (2026년 8월 1주차)  
 > **태그**: `#주간트렌드` `#GitHub` `#OpenClaw` `#Qwen38Max` `#Bumblebee` `#공급망보안` `#AIAgent` `#uv`

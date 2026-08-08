@@ -6,8 +6,6 @@ date: 2026-08-03
 categories: [Trends, Rust]
 ---
 
-# 🚀 [2026 기술 트렌드] AI 에이전트 시대의 개발 생산성: Rust 툴체인(uv·Ruff·Ghostty)과 MCP 보안 심층 분석
-
 > **작성일**: 2026년 8월 3일  
 > **태그**: `#개발트렌드` `#AIAgent` `#Rust` `#uv` `#Ruff` `#Ghostty` `#MCP` `#보안` `#생산성`
 

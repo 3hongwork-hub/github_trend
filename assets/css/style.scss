@@ -85,7 +85,7 @@
   white-space: nowrap;
 }
 
-/* Custom styling for clean vertical article list */
+/* Custom styling for home layout */
 .home {
   max-width: 860px;
   margin: 0 auto;
@@ -142,7 +142,6 @@
   display: inline-block;
 }
 
-/* Force each post to be a separate, clean, full-width block line */
 .clean-post-list {
   list-style: none !important;
   margin: 0 !important;
@@ -221,4 +220,162 @@
   line-height: 1.6;
   margin: 0 !important;
   display: block !important;
+}
+
+/* Post Detail View Styling */
+.post-detail-container {
+  max-width: 820px;
+  margin: 1.5rem auto 4rem auto;
+  padding: 2rem 2.25rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.post-header-section {
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.post-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-detail-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.post-detail-description {
+  font-size: 0.975rem;
+  line-height: 1.6;
+  color: #475569;
+  background-color: #f8fafc;
+  border-left: 4px solid #2563eb;
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 0;
+}
+
+.post-content-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+
+  p {
+    margin-bottom: 1.25rem;
+    word-break: keep-all;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.4rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid #cbd5e1;
+    padding-left: 1rem;
+    color: #64748b;
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+
+  pre {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    padding: 1.25rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 1.5rem 0;
+  }
+
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  pre code {
+    background: transparent !important;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+    margin: 2rem 0;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+}
+
+.post-footer-nav {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+}
+
+.back-to-list-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  background-color: #2563eb;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 9999px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.back-to-list-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }

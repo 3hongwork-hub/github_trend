@@ -6,8 +6,6 @@ date: 2026-08-06
 categories: [AI, Fullstack]
 ---
 
-# 🤖 [2026 AI 풀스택] Vercel AI SDK 4.0 & MCP로 구축하는 차세대 멀티 에이전트 웹 서비스
-
 > **작성일**: 2026년 8월 6일  
 > **분야**: AI, Fullstack, Next.js, TypeScript  
 > **태그**: `#VercelAISDK` `#MCP` `#ModelContextProtocol` `#Nextjs` `#MultiAgent` `#AIAgent` `#TypeScript`
