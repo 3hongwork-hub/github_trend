@@ -9,13 +9,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-include:
-  - posts
-
-collections:
-  posts:
-    output: true
-    permalink: /posts/:name/
+permalink: /posts/:year-:month-:day-:title/
 
 markdown: kramdown
 highlighter: rouge
