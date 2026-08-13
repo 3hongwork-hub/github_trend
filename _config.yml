@@ -5,6 +5,9 @@ url: "https://3hongwork-hub.github.io"
 
 theme: minima
 
+future: true
+timezone: Asia/Seoul
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
