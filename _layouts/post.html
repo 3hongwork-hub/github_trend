@@ -3,16 +3,30 @@ layout: default
 ---
 
 <article class="post-detail-container" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header-section">
-    <div class="post-header-meta">
-      <span class="post-date-badge">📅 {{ page.date | date: "%Y년 %m월 %d일" }}</span>
+  <div class="post-back-link-wrapper">
+    <a href="{{ "/" | relative_url }}" class="back-link">
+      <span>←</span>
+      <span>트렌드 목록으로 돌아가기</span>
+    </a>
+  </div>
+
+  <header class="post-detail-header">
+    <div class="post-meta-badges">
+      <span class="post-date-pill">📅 {{ page.date | date: "%Y년 %m월 %d일" }}</span>
       {% if page.categories %}
-        <span class="post-cat-badge">{{ page.categories | join: " / " }}</span>
+        {% for cat in page.categories %}
+          <span class="post-cat-pill cat-{{ cat | downcase }}">{{ cat }}</span>
+        {% endfor %}
       {% endif %}
     </div>
+
     <h1 class="post-detail-title" itemprop="name headline">{{ page.title | escape }}</h1>
+
     {% if page.description %}
-      <p class="post-detail-description">{{ page.description }}</p>
+      <div class="post-detail-summary">
+        <span class="summary-icon">💡</span>
+        <p>{{ page.description }}</p>
+      </div>
     {% endif %}
   </header>
 
@@ -20,7 +34,13 @@ layout: default
     {{ content }}
   </div>
 
-  <footer class="post-footer-nav">
-    <a href="{{ "/" | relative_url }}" class="back-to-list-btn">← 전체 글 목록으로 돌아가기</a>
+  <footer class="post-detail-footer">
+    <div class="post-share-card">
+      <div class="share-info">
+        <h4>📈 GitHub Trend & Tech Insights</h4>
+        <p>매주 업데이트되는 최신 개발 트렌드와 깃허브 추천 저장소를 만나보세요.</p>
+      </div>
+      <a href="{{ "/" | relative_url }}" class="footer-home-btn">다른 아티클 보러가기 →</a>
+    </div>
   </footer>
 </article>

@@ -1,16 +1,25 @@
-<header class="site-header" role="banner">
-  <div class="wrapper header-flex-container">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      📈 GitHub Trend & Tech Insights
+<header class="site-header">
+  <div class="header-container">
+    <a class="site-title" href="{{ "/" | relative_url }}">
+      <span class="logo-icon">📈</span>
+      <span class="logo-text">GitHub Trend</span>
+      <span class="version-badge">2026</span>
     </a>
 
-    <!-- Top Right Prominent Search Box -->
-    <div class="top-right-search-container">
+    <div class="header-right">
       <div class="header-search-wrapper">
         <span class="header-search-icon">🔍</span>
-        <input type="text" id="search-input" class="header-search-input" placeholder="포스팅, 태그, 키워드 실시간 검색..." autocomplete="off">
+        <input type="text" id="search-input" class="header-search-input" placeholder="트렌드, 기술, 키워드 검색..." autocomplete="off">
+        <span id="search-status" class="header-search-status" style="display: none;"></span>
       </div>
-      <span id="search-status" class="header-search-status" style="display: none;"></span>
+
+      <nav class="site-nav">
+        <a class="nav-link" href="{{ "/" | relative_url }}">홈</a>
+        <a class="nav-link github-nav-btn" href="https://github.com/3hongwork-hub/github_trend" target="_blank" rel="noopener">
+          <span>GitHub</span>
+          <span class="arrow-icon">↗</span>
+        </a>
+      </nav>
     </div>
   </div>
 </header>
