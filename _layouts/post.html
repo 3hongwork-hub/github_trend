@@ -44,3 +44,61 @@ layout: default
     </div>
   </footer>
 </article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const postBody = document.querySelector('.post-content-body');
+    if (!postBody) return;
+
+    // Helper to normalize strings for robust matching
+    function normalizeStr(str) {
+      return str.replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, '')
+                .replace(/[^\w\s\uAC00-\uD7A3]/g, '')
+                .trim()
+                .toLowerCase();
+    }
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3, h4, h5, h6'));
+    const links = postBody.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        const rawHref = this.getAttribute('href');
+        if (!rawHref || rawHref === '#') return;
+
+        const targetId = decodeURIComponent(rawHref.substring(1));
+        let targetEl = document.getElementById(targetId);
+
+        // Fallback: If Kramdown stripped characters and exact ID not found, match by heading text
+        if (!targetEl) {
+          const linkText = normalizeStr(this.textContent);
+          targetEl = headings.find(h => {
+            const hText = normalizeStr(h.textContent);
+            return hText.includes(linkText) || linkText.includes(hText);
+          });
+        }
+
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, null, '#' + (targetEl.id || targetId));
+        }
+      });
+    });
+
+    // Check if page loaded with a hash in URL
+    if (window.location.hash) {
+      const hashId = decodeURIComponent(window.location.hash.substring(1));
+      let initialTarget = document.getElementById(hashId);
+      if (!initialTarget) {
+        const cleanHash = normalizeStr(hashId);
+        initialTarget = headings.find(h => normalizeStr(h.textContent).includes(cleanHash));
+      }
+      if (initialTarget) {
+        setTimeout(() => {
+          initialTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  });
+</script>
