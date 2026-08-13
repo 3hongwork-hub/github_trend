@@ -14,16 +14,16 @@ categories: [Trends, AI]
 
 ## 📌 목차
 1. [💡 서론: '보조 도구'에서 '자율 주행'으로, 2026년 8월 개발 현주소](#section-1)
-2. [🤖 1. 코드 자동완성을 넘어 자율형 에이전틱(Agentic) SDLC로](#section-2)
+2. [🤖 코드 자동완성을 넘어 자율형 에이전틱(Agentic) SDLC로](#section-2)
    - [2.1 단일 보조 도구(Assistant)의 종말과 멀티 에이전트 크루](#section-2-1)
    - [2.2 자율적 자가 수정(Self-Correction) 및 CI/CD 루프](#section-2-2)
-3. [⚠️ 2. AI 코드 신뢰성 위기(Trust Crisis)와 검증 공학(Quality Engineering)](#section-3)
+3. [⚠️ AI 코드 신뢰성 위기(Trust Crisis)와 검증 공학(Quality Engineering)](#section-3)
    - [3.1 개발자 신뢰도 급락(43% ➔ 29%)의 진짜 원인](#section-3-1)
    - [3.2 2026년 8월 EU AI Act 발효와 CI/CD 거버넌스 자동화](#section-3-2)
-4. [🧠 3. 시니어 개발자의 역할 재정의: Coder에서 System Auditor로](#section-4)
+4. [🧠 시니어 개발자의 역할 재정의: Coder에서 System Auditor로](#section-4)
    - [4.1 의도 전달 중심의 'Vibe Engineering'](#section-4-1)
    - [4.2 기본기(컴퓨터 과학 근본)가 더 중요해진 이유](#section-4-2)
-5. [🎯 4. 결론: 개발자와 조직이 갖춰야 할 2026년 하반기 전략](#section-5)
+5. [🎯 결론: 개발자와 조직이 갖춰야 할 2026년 하반기 전략](#section-5)
 
 ---
 
@@ -37,7 +37,7 @@ categories: [Trends, AI]
 
 ---
 
-## 2. 🤖 1. 코드 자동완성을 넘어 자율형 에이전틱(Agentic) SDLC로 {: #section-2 }
+## 2. 🤖 코드 자동완성을 넘어 자율형 에이전틱(Agentic) SDLC로 {: #section-2 }
 
 ### 2.1 단일 보조 도구(Assistant)의 종말과 멀티 에이전트 크루 {: #section-2-1 }
 과거에는 Cursor나 GitHub Copilot처럼 개발자가 작성 중인 코드의 다음 줄을 추천해 주는 보조 도구가 중심이었습니다. 그러나 2026년에는 역할이 명확히 분담된 **'전문 에이전트 크루(Multi-Agent Crews)'**가 자율적으로 기획, 구현, 검증을 분업합니다.
@@ -57,7 +57,7 @@ Qwen 3.8 Max, Claude Code, OpenClaw 등의 최신 에이전트들은 코드를 �
 
 ---
 
-## 3. ⚠️ 2. AI 코드 신뢰성 위기(Trust Crisis)와 검증 공학(Quality Engineering) {: #section-3 }
+## 3. ⚠️ AI 코드 신뢰성 위기(Trust Crisis)와 검증 공학(Quality Engineering) {: #section-3 }
 
 ### 3.1 개발자 신뢰도 급락(43% ➔ 29%)의 진짜 원인 {: #section-3-1 }
 AI 도구 채택률이 84%에 육박함에도 불구하고, 조사에 따르면 **AI가 생성한 코드에 대한 개발자의 신뢰도는 과거 43%에서 최근 29%로 대폭 하락**했습니다.
@@ -72,7 +72,7 @@ AI 도구 채택률이 84%에 육박함에도 불구하고, 조사에 따르면 
 
 ---
 
-## 4. 🧠 3. 시니어 개발자의 역할 재정의: Coder에서 System Auditor로 {: #section-4 }
+## 4. 🧠 시니어 개발자의 역할 재정의: Coder에서 System Auditor로 {: #section-4 }
 
 ### 4.1 의도 전달 중심의 'Vibe Engineering' {: #section-4-1 }
 2026년에는 단순 타이핑이나 문법 숙련도보다, **AI 에이전트에게 시스템 아키텍처와 도메인 맥락(Context)을 정확하게 전달하는 능력인 'Vibe Engineering'**이 개발자의 핵심 역량으로 떠올랐습니다.
@@ -87,7 +87,7 @@ AI가 코드를 1초 만에 쏟아내는 시대일수록, **컴퓨터 구조, �
 
 ---
 
-## 5. 🎯 4. 결론: 개발자와 조직이 갖춰야 할 2026년 하반기 전략 {: #section-5 }
+## 5. 🎯 결론: 개발자와 조직이 갖춰야 할 2026년 하반기 전략 {: #section-5 }
 
 1. **AI 거버넌스 & 자동 검증 파이프라인 도입**: AI 에이전트를 도입하되, CI/CD 단계에서 정적 분석 및 보안 스캐닝을 철저히 자동화하세요.
 2. **명세(Spec) 작성 및 에이전트 지휘 역량 강화**: 구체적이고 명확한 의도와 테스트 케이스를 미리 작성하여 에이전트의 이탈을 방지하세요.

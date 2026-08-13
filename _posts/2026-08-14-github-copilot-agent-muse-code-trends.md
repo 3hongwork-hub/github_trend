@@ -14,16 +14,16 @@ categories: [Tools, AI]
 
 ## 📌 목차
 1. [💡 서론: 2026년 8월 중순, 개발자 도구 생태계의 지각변동](#section-1)
-2. [🤖 1. GitHub Copilot의 에이전틱(Agentic) 진화와 Java Agent SDK](#section-2)
+2. [🤖 GitHub Copilot의 에이전틱(Agentic) 진화와 Java Agent SDK](#section-2)
    - [2.1 이슈(Issue) 할당부터 PR(Pull Request) 자동 발행까지](#section-2-1)
    - [2.2 엔터프라이즈를 위한 프레임워크 독립형 Copilot Java SDK](#section-2-2)
-3. [🔥 2. Meta의 신규 코딩 에이전트 'Muse Code'와 IDE 삼국지](#section-3)
+3. [🔥 Meta의 신규 코딩 에이전트 'Muse Code'와 IDE 삼국지](#section-3)
    - [3.1 Cursor, Windsurf, 그리고 Meta Muse Code의 참전](#section-3-1)
    - [3.2 토큰 비용 가시성과 클라우드 스택 최적화](#section-3-2)
-4. [⚡ 3. 2026 하반기 표준 개발 스택: Playwright와 모듈러 모놀리스](#section-4)
+4. [⚡ 2026 하반기 표준 개발 스택: Playwright와 모듈러 모놀리스](#section-4)
    - [4.1 AI 생성 코드 검증의 표준이 된 Playwright e2e](#section-4-1)
    - [4.2 마이크로서비스 피로감과 실용적 '모듈러 모놀리스(Modular Monolith)'](#section-4-2)
-5. [🎯 4. 결론: 개발자가 지금 준비해야 할 툴체인 최적화 로드맵](#section-5)
+5. [🎯 결론: 개발자가 지금 준비해야 할 툴체인 최적화 로드맵](#section-5)
 
 ---
 
@@ -37,7 +37,7 @@ GitHub는 Copilot의 에이전트 기능을 대폭 강화하여 이슈를 자동
 
 ---
 
-## 2. 🤖 1. GitHub Copilot의 에이전틱(Agentic) 진화와 Java Agent SDK {: #section-2 }
+## 2. 🤖 GitHub Copilot의 에이전틱(Agentic) 진화와 Java Agent SDK {: #section-2 }
 
 ### 2.1 이슈(Issue) 할당부터 PR(Pull Request) 자동 발행까지 {: #section-2-1 }
 GitHub Copilot은 이제 개발자가 에디터에서 질문을 던지는 수준을 넘어, **GitHub 저장소에 등록된 Issue를 스스로 분석하고 브랜치를 생성하여 해결 코드를 작성한 뒤 Pull Request까지 생성**하는 자율 에이전트로 성숙했습니다.
@@ -60,7 +60,7 @@ GitHub Copilot은 이제 개발자가 에디터에서 질문을 던지는 수준
 
 ---
 
-## 3. 🔥 2. Meta의 신규 코딩 에이전트 'Muse Code'와 IDE 삼국지 {: #section-3 }
+## 3. 🔥 Meta의 신규 코딩 에이전트 'Muse Code'와 IDE 삼국지 {: #section-3 }
 
 ### 3.1 Cursor, Windsurf, 그리고 Meta Muse Code의 참전 {: #section-3-1 }
 8월 들어 Meta가 오픈소스 코딩 에이전트 모델인 **Muse Code**를 공개하면서, AI-Native IDE 시장의 경쟁이 격화되었습니다.
@@ -76,7 +76,7 @@ AI 에이전트 사용량이 폭발하면서 개발팀의 주요 과제로 'AI �
 
 ---
 
-## 4. ⚡ 3. 2026 하반기 표준 개발 스택: Playwright와 모듈러 모놀리스 {: #section-4 }
+## 4. ⚡ 2026 하반기 표준 개발 스택: Playwright와 모듈러 모놀리스 {: #section-4 }
 
 ### 4.1 AI 생성 코드 검증의 표준이 된 Playwright e2e {: #section-4-1 }
 AI가 수백 줄의 코드를 몇 초 만에 작성할 수 있게 되면서, 사람이 직접 UI를 누르며 확인하는 수동 QA는 한계에 도달했습니다.
@@ -88,7 +88,7 @@ AI가 수백 줄의 코드를 몇 초 만에 작성할 수 있게 되면서, 사
 
 ---
 
-## 5. 🎯 4. 결론: 개발자가 지금 준비해야 할 툴체인 최적화 로드맵 {: #section-5 }
+## 5. 🎯 결론: 개발자가 지금 준비해야 할 툴체인 최적화 로드맵 {: #section-5 }
 
 1. **테스트 자동화 인프라 강화**: AI 에이전트가 마음껏 코드를 수정할 수 있도록 Playwright 기반 e2e 및 통합 테스트 커버리지를 70% 이상 확보하세요.
 2. **도메인 경계가 명확한 모듈화**: 마이크로서비스를 무리하게 늘리기보다 단일 코드베이스 내 모듈 인터페이스를 엄격히 정의하세요.

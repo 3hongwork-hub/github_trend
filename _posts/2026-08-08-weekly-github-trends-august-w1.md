@@ -13,20 +13,20 @@ categories: [Weekly, Trends]
 ---
 
 ## 📌 목차
-1. [💡 서론: 2026년 8월 1주차 깃허브 생태계 요약](#1-💡-서론-2026년-8월-1주차-깃허브-생태계-요약)
-2. [🔥 이번 주 바이럴 저장소 TOP 3](#2-🔥-이번-주-바이럴-저장소-top-3)
-   - 2.1 `OpenClaw`: 21만 별 달성, 완전히 로컬에서 동작하는 AI 비서
-   - 2.2 `Qwen 3.8 Max`: Agentic Index 1위 오픈 가중치 모델 공개
-   - 2.3 `Bumblebee`: Perplexity가 만든 MCP & AI 공급망 보안 스캐너
-3. [⚡ 개발 툴체인 트렌드: Rust 기반 통합 툴의 대세화](#3-⚡-개발-툴체인-트렌드-rust-기반-통합-툴의-대세화)
-   - 3.1 Python 생태계를 점령한 `uv` & `Ruff`
-   - 3.2 GPU 가속 터미널 `Ghostty` & 비동기 TUI 파일 매니저 `Yazi`
-4. [⚠️ 주의할 깃허브 보안 경보: 가짜 AI 저장소와 트로이 목마](#4-⚠️-주의할-깃허브-보안-경보-가짜-ai-저장소와-트로이-목마)
-5. [🎯 이번 주 개발자가 챙겨야 할 액션 플랜](#5-🎯-이번-주-개발자가-챙겨야-할-액션-플랜)
+1. [💡 서론: 2026년 8월 1주차 깃허브 생태계 요약](#section-1)
+2. [🔥 이번 주 바이럴 저장소 TOP 3](#section-2)
+   - [2.1 OpenClaw: 21만 별 달성, 완전히 로컬에서 동작하는 AI 비서](#section-2-1)
+   - [2.2 Qwen 3.8 Max: Agentic Index 1위 오픈 가중치 모델 공개](#section-2-2)
+   - [2.3 Bumblebee: Perplexity가 만든 MCP & AI 공급망 보안 스캐너](#section-2-3)
+3. [⚡ 개발 툴체인 트렌드: Rust 기반 통합 툴의 대세화](#section-3)
+   - [3.1 Python 생태계를 점령한 uv & Ruff](#section-3-1)
+   - [3.2 GPU 가속 터미널 Ghostty & 비동기 TUI 파일 매니저 Yazi](#section-3-2)
+4. [⚠️ 주의할 깃허브 보안 경보: 가짜 AI 저장소와 트로이 목마](#section-4)
+5. [🎯 이번 주 개발자가 챙겨야 할 액션 플랜](#section-5)
 
 ---
 
-## 1. 💡 서론: 2026년 8월 1주차 깃허브 생태계 요약
+## 1. 💡 서론: 2026년 8월 1주차 깃허브 생태계 요약 {: #section-1 }
 
 2026년 8월 1주차 깃허브(GitHub) 생태계는 **"로컬-퍼스트 AI(Local-First AI)"**, **"오픈 가중치 프론티어 LLM"**, 그리고 **"AI 공급망 보안"**이라는 3가지 키워드로 압축됩니다.
 
@@ -36,9 +36,9 @@ categories: [Weekly, Trends]
 
 ---
 
-## 2. 🔥 이번 주 바이럴 저장소 TOP 3
+## 2. 🔥 이번 주 바이럴 저장소 TOP 3 {: #section-2 }
 
-### 2.1 `OpenClaw`: 21만 별 달성, 완전히 로컬에서 동작하는 AI 비서
+### 2.1 OpenClaw: 21만 별 달성, 완전히 로컬에서 동작하는 AI 비서 {: #section-2-1 }
 * **저장소**: [`openclaw/openclaw`](https://github.com/openclaw/openclaw) (⭐ 210,000+)
 * **개요**: 2026년 들어 가장 빠른 속도로 스타(Stars) 수가 증가한 역대급 오픈소스 프로젝트입니다.
 * **주요 특징**:
@@ -46,7 +46,7 @@ categories: [Weekly, Trends]
   - Slack, Discord, iMessage, VS Code 등 50개 이상의 앱과 연동되어 개인 워크플로우와 코딩 작업을 자율적으로 수행합니다.
   - 로컬 LLM(Ollama, vLLM 기반 DeepSeek, Llama 3)을 슬롯 형태로 마운트하여 보안 유지.
 
-### 2.2 `Qwen 3.8 Max`: Agentic Index 1위 오픈 가중치 모델 공개
+### 2.2 Qwen 3.8 Max: Agentic Index 1위 오픈 가중치 모델 공개 {: #section-2-2 }
 * **저장소**: [`QwenLM/Qwen`](https://github.com/QwenLM/Qwen)
 * **개요**: 알리바바 Qwen 팀이 8월 초 공개한 2.4조(2.4T) 파라미터 규모의 MoE 프론티어 AI 모델입니다.
 * **주요 특징**:
@@ -54,7 +54,7 @@ categories: [Weekly, Trends]
   - 최상위 Max급 프론티어 모델 최초로 **가중치(Open Weights) 전체 무료 공개**.
   - 100만 토큰 컨텍스트 윈도우 지원 및 Anthropic API 완전 호환.
 
-### 2.3 `Bumblebee`: Perplexity가 만든 MCP & AI 공급망 보안 스캐너
+### 2.3 Bumblebee: Perplexity가 만든 MCP & AI 공급망 보안 스캐너 {: #section-2-3 }
 * **저장소**: [`perplexity-ai/bumblebee`](https://github.com/perplexity-ai/bumblebee)
 * **개요**: AI 에이전트가 로컬 환경에서 CLI 커맨드를 실행하고 서드파티 MCP 서버를 연결할 때 발생하는 보안 위험을 방지하는 Read-Only 공급망 스캐너입니다.
 * **주요 특징**:
@@ -62,19 +62,19 @@ categories: [Weekly, Trends]
 
 ---
 
-## 3. ⚡ 개발 툴체인 트렌드: Rust 기반 통합 툴의 대세화
+## 3. ⚡ 개발 툴체인 트렌드: Rust 기반 통합 툴의 대세화 {: #section-3 }
 
-### 3.1 Python 생태계를 점령한 `uv` & `Ruff`
+### 3.1 Python 생태계를 점령한 uv & Ruff {: #section-3-1 }
 Python 개발 환경에서 파편화되어 있던 `pip`, `virtualenv`, `pyenv`, `poetry`를 단 하나의 바이너리로 통합한 **`astral-sh/uv`**가 2026년 8월 기준 파이썬 개발자의 1순위 표준 툴로 확립되었습니다.
 - **`uv`**: 기존 대비 10~100배 빠른 속도로 패키지 및 가상환경 관리.
 - **`ruff`**: CPython 기반 Linter 대비 100배 빠른 포맷터.
 
-### 3.2 GPU 가속 터미널 `Ghostty` & 비동기 TUI 파일 매니저 `Yazi`
+### 3.2 GPU 가속 터미널 Ghostty & 비동기 TUI 파일 매니저 Yazi {: #section-3-2 }
 AI 에이전트가 초당 수만 줄의 실시간 로그를 출력하는 환경에 맞춰, GPU 가속 터미널 **`Ghostty`**와 Rust 기반 비동기 TUI 파일 매니저 **`Yazi`**가 개발자들의 필수 터미널 스택으로 정착했습니다.
 
 ---
 
-## 4. ⚠️ 주의할 깃허브 보안 경보: 가짜 AI 저장소와 트로이 목마
+## 4. ⚠️ 주의할 깃허브 보안 경보: 가짜 AI 저장소와 트로이 목마 {: #section-4 }
 
 이번 주 보안 연구원들이 경고한 바에 따르면, 인기 AI 오픈소스 저장소(OpenClaw, Ollama 등)를 모방한 **가짜 트로이 목마 저장소**가 급증하고 있습니다.
 
@@ -85,7 +85,7 @@ AI 에이전트가 초당 수만 줄의 실시간 로그를 출력하는 환경�
 
 ---
 
-## 5. 🎯 이번 주 개발자가 챙겨야 할 액션 플랜
+## 5. 🎯 이번 주 개발자가 챙겨야 할 액션 플랜 {: #section-5 }
 
 1. **로컬 에이전트 도입해보기**: 보안 유출 없이 로컬에서 코딩을 보조해주는 `OpenClaw` 또는 `Ollama` 셋업해보기.
 2. **Python 프로젝트 툴체인 교체**: 기존 `pip`/`poetry`를 `uv`로 전환하여 빌드 및 설치 속도 10배 끌어올리기.
